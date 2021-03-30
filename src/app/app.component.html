@@ -1,6 +1,70 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>All-things-quotes</h1>
-  </body>
+    <style>
+      input[type=text]{
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display:flexbox;
+        border: none;
+        border-bottom: 2px  #4CAF50;
+}
+      input[type=submit] {
+        width: 70%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+}
+
+        input[type=submit]:hover {
+         background-color: #45a049;
+}
+        .Form{
+          margin: auto;
+          width:70%;
+          padding:30px;
+}
+        .title h1{
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          text-align: center;
+        }
+        body{
+          background-image: url("/images/quotes2.jpg")
+        }
+    </style>
+    <div class="title">
+      <h1>All-things-quotes</h1>
+      <div class="links">
+        <li><a href="#newquote">New quote</a></li>
+      </div>
+    </div>
+    <section id="newquote">
+      <div class="Form">
+        <form action="/action_page.php">
+          <label for="quote-input"></label>
+          <input type="text" id="quote-input" name="Write Your Quote here..." placeholder="Write your quote here..." required>
+
+          <label for="author"></label>
+          <input type="text" id="author" name="Author of the quote..." placeholder="Author of the quote..." required>
+
+          <label for="username"></label>
+          <input type="text" id="username" name="Tell us who you are..." placeholder="Tell us who you are...">
+
+          <input type="submit" value="Submit">
+
+        </form>
+      </div>
+    </section>
+    </body>
 </html>
