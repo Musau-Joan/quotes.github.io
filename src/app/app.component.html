@@ -42,12 +42,74 @@
         body{
           background-image: url("/images/quotes2.jpg")
         }
+        .header{
+          height: 7vh;
+          display: flex;
+          border: 1px solid grey;
+          padding-left: 50px;
+          width:100%;
+          position: fixed;
+          background-color: white;
+        }
+        .links{
+          margin:left;
+          display:flex;
+        }
+        .links li a {
+          text-decoration: none;
+          padding: 30px;
+          font-size: 28px;
+          font-weight: bold;
+          color: floralwhite;
+        }
+        .links li{
+          list-style: none;
+          margin-top: 20px;
+        }
+        .existing-quotes{
+          display:flex;
+          height:50%;
+          width:100%;
+        }
     </style>
     <div class="title">
-      <h1>All-things-quotes</h1>
+      <h1>All-things-Quotes</h1>
       <div class="links">
         <li><a href="#newquote">New quote</a></li>
       </div>
+    </div>
+    <br>
+    <div class="existing-quotes">
+      <div class="quotes1">
+        <p>
+          "Feminism is the radical notion that women are human beings."
+          -Cheris Kramarae
+        </p>
+      </div>
+      <br>
+      <div class="quotes2">
+        <p>
+          "It has become appalingly obvious that our technology has exceeded our humanity"
+          -Albert Einstein
+        </p>
+      </div>
+      <br>
+    </div>
+    <div class="existing-quotes 2">
+      <div class="quotes3">
+        <p>
+          "I do not fear computers, I fear lack of them."
+          -Isaac Asimov
+        </p>
+        <br>
+      </div>
+      <div class="quotes4">
+        <p>
+          "The question isn't who is going to let me,its who is going to stop me."
+          -Ayn Rand
+        </p>
+      </div>
+      <br>
     </div>
     <section id="newquote">
       <div class="Form">
