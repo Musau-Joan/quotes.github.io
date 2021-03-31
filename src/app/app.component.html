@@ -1,6 +1,218 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
   <body>
-    <h1>All-things-quotes</h1>
-  </body>
+    <style>
+      input[type=text]{
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display:flexbox;
+        border: none;
+        border-bottom: 2px  #4CAF50;
+}
+      input[type=submit] {
+        width: 70%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+}
+
+        input[type=submit]:hover {
+         background-color: #45a049;
+}
+        .Form{
+          margin: auto;
+          width:70%;
+          padding:30px;
+          margin:auto;
+}
+        .title h1{
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          text-align: center;
+          font-size:36px;
+        }
+        body{
+          background-image: url("/images/quotes2.jpg")
+        }
+        .header{
+          height: 7vh;
+          display: flex;
+          border: 1px solid grey;
+          padding-left: 50px;
+          width:100%;
+          position: fixed;
+          background-color: white;
+        }
+        .links{
+          margin:left;
+          display:flex;
+        }
+        .links li a {
+          text-decoration: none;
+          padding: 30px;
+          font-size: 28px;
+          font-weight: bold;
+          color: floralwhite;
+        }
+        .links li{
+          list-style: none;
+          margin-top: 20px;
+        }
+        .existing-quotes{
+          display:flex;
+          height:50%;
+          width:100%;
+        }
+        .quotes1{
+          padding: 20px;
+          border:1px solid transparent;
+          width: 48%;
+          background: rgb(104, 196, 104);
+          margin:20px;
+          transition: 0.8s;
+          border-radius: 20px;
+          text-align: center;
+        }
+        .quotes1 p{
+          font-size: 28px;
+        }
+        .quotes2{
+          padding: 20px;
+          border:1px solid transparent;
+          width: 48%;
+          background: rgb(104, 196, 104);
+          margin:20px;
+          transition: 0.8s;
+          border-radius: 20px;
+          text-align: center;
+        }
+        .quotes2 p{
+          font-size:28px;
+        }
+        .quotes4{
+          padding: 20px;
+          border:1px solid transparent;
+          width: 50%;
+          background: rgb(104, 196, 104);
+          margin:auto;
+          transition: 0.8s;
+          border-radius: 20px;
+          text-align:center;
+        }
+        .quotes4 p{
+          font-size:28px;
+        }
+        .existing-quotes3{
+          padding: 20px;
+          border:1px solid transparent;
+          width: 50%;
+          background: rgb(104, 196, 104);
+          margin:auto;
+          transition: 0.8s;
+          border-radius: 20px;
+          text-align: center;
+        }
+        .existing-quotes3 p{
+          font-size:28px;
+        }
+        .fa {
+          font-size: 50px;
+          cursor: pointer;
+          user-select: none;
+        }
+
+        .fa:hover {
+          color: rgb(26, 97, 58);
+        }
+    </style>
+    <div class="title">
+      <h1>All Things Quotes</h1>
+      <div class="links">
+        <li><a href="#newquote">New quote</a></li>
+      </div>
+    </div>
+    <br>
+    <div class="existing-quotes">
+      <div class="quotes1">
+        <p>
+          "Feminism is the radical notion that women are human beings."
+          -Cheris Kramarae
+        </p>
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+      </div>
+      <br>
+      <div class="quotes2">
+        <p>
+          "It has become appalingly obvious that our technology has exceeded our humanity"
+          -Albert Einstein
+        </p>
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+      </div>
+      <br>
+    </div>
+    <div class="existing-quotes 2">
+      <div class="quotes4">
+        <p>
+          "The question isn't who is going to let me,its who is going to stop me."
+          -Ayn Rand
+        </p>
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+      </div>
+      <br>
+    </div>
+    <br>
+    <div class="existing-quotes3">
+      <div class="quotes6">
+        <p>
+          "Simplicity is about subtracting the obvious and adding the meaningful"
+          -John Maeda
+        </p>
+        <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="newquote">
+      <div class="Form">
+        <form name="Share a quote with us" id="form" onsubmit="ourFunction()">
+          <label for="quote-input"></label>
+          <input type="text" id="quote-input" name="Write Your Quote here..." placeholder="Write your quote here..." required>
+
+          <label for="author"></label>
+          <input type="text" id="author" name="Author of the quote..." placeholder="Author of the quote..." required>
+
+          <label for="username"></label>
+          <input type="text" id="username" name="Tell us who you are..." placeholder="Tell us who you are...">
+          
+          <input type="submit" value="Submit">
+
+
+        </form>
+      </div>
+    </section>
+    <script>
+      function myFunction(x){
+        x.classList.toggle("fa-thumbs-down");
+      }
+      function ourFunction(){
+        alert("Thank you for sharing your quote with us. You are welcome to scroll through an interact with amazing quotes just like yours.")
+      }
+    </script>
+    </body>
 </html>
